@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage{tipa,delarray,amsmath}
+
+\newcommand{\ipa}[1]{\textipa{#1}}
+
+\newenvironment{phon_rule}{%
+  \begin{center}
+  \renewcommand\>{\ {\Large $\to$}\ }
+  \renewcommand{\/}{{\Huge \ /\ }}
+  \newcommand{\when}{\/}
+  \renewcommand\_{\ $\rule{2em}{0.5pt}$\ }
+  \renewcommand\null{{\Large $\emptyset$}\ \ }
+
+  \newcommand{\phone}[1]{\ [\ \ipa{##1}\ ]\ }
+  \newcommand{\phoneme}[1]{\ /\ \ipa{##1} /\ }
+
+  \newcommand{\cv}[1]{{\Large \textrm{##1}}}
+  \let\hash\# \renewcommand\#{ \cv{\hash} }
+
+  \newcommand{\features}[1]{
+    $\begin{array}[c][ {l} ]
+      \vspace{-1px}
+      ##1
+    \end{array}$
+  }
+  \newcommand{\cvfeatures}[2]{
+    $\begin{array}{c}
+       \cv{##1} \\
+       \begin{array}[c][ {l} ]
+         \vspace{-1px}
+         ##2
+       \end{array}
+    \end{array}$
+  }
+  \newcommand{\f}[2]{
+    ##1\,\,\rm{##2} \\
+  }
+
+  \newcommand{\oneof}[1]{$\begin{cases} ##1 \end{cases}$}
+}{%
+  \end{center}
+}
+
+\begin{document}
+
+\section*{Examples}
+
+\begin{itemize}
+
+\item English Intervocalic Alveolar Flapping:
+
+\begin{phon_rule}
+\cvfeatures{C}{\f{+}{stop} \f{+}{alv.}} \> \phone{R} \/ 
+\cvfeatures{V}{\f{+}{stress}} \_ \cvfeatures{V}{\f{-}{stress}}
+\end{phon_rule}
+
+\item English Vowel Nasalization:
+
+\begin{phon_rule}
+\cv{V} \> \features{\f{+}{nasal}} \/ 
+\features{\f{+}{nasal}} \cv{(C)} \#
+\end{phon_rule}
+
+\item Yoruba Tone Falling:
+
+\begin{phon_rule}
+\cv{L} \> \cv{F} \/
+\cv{H} \_
+\end{phon_rule}
+
+\item English \ipa{@} Insertion:
+
+\begin{phon_rule}
+\null \> \phone{@} \/
+\features{\f{+}{sib.}} \_ \features{\f{+}{sib.}} \#
+\end{phon_rule}
+
+\item English Nasal Place Assimilation:
+
+\begin{phon_rule}
+\cv{N} \> \features{\f{\alpha}{place}} \/
+\_ \cvfeatures{C}{\f{\alpha}{place}}
+\end{phon_rule}
+
+\item Turkish Sonorant Devoicing:
+
+\begin{phon_rule}
+\features{\f{-}{sonorant}} \> \features{\f{-}{voice}} \/
+\_ \oneof{\# \\ \cv{C}}
+\end{phon_rule}
+
+\end{itemize}
+
+\end{document}
