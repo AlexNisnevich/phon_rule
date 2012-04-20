@@ -35,7 +35,7 @@ Each element of the rule can be composed of the following:
 
 - `\cv{V}`: a CV-tier or tonal-tier element
 
-  - ${\Large \textrm{V}}$
+	- ${\Large \textrm{V}}$
 
 - `\phoneme{S}`: an IPA phoneme, using the `tipa` library
 
@@ -47,7 +47,7 @@ Each element of the rule can be composed of the following:
 
 - `\features{\f{+}{stop} \f{+}{alv.}}`, a feature matrix, where each `\f{+/-}{name}` is a feature
 
-  - ![](http://quicklatex.com/cache3/ql_99daf3ac81513b700e089296a4bcbe14_l3.png)
+	- ![](http://quicklatex.com/cache3/ql_99daf3ac81513b700e089296a4bcbe14_l3.png)
 
 - `\cvfeatures{C}{\f{\alpha}{place}}`: as above, but with a CV-tier element above the feature matrix
 
@@ -59,11 +59,11 @@ Each element of the rule can be composed of the following:
 
 - `\#`: a word-boundary marker
 
-  - ${\Large \textrm{\#}}$
+	- ${\Large \textrm{\#}}$
 
 - `\null`: a null symbol
 
-  - ${\Large \emptyset}$
+	- ${\Large \emptyset}$
 
 ### Examples
 

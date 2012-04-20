@@ -42,7 +42,7 @@ Each element of the rule can be composed of the following:
 
 - `\cv{V}`: a CV-tier or tonal-tier element
 
-  - ![{\Large \textrm{V}}](http://quicklatex.com/cache3/ql_0dfc1ddf048901945d295e06e88a26ef_l3.png)
+	- ![{\Large \textrm{V}}](http://quicklatex.com/cache3/ql_0dfc1ddf048901945d295e06e88a26ef_l3.png)
 
 
 - `\phoneme{S}`: an IPA phoneme, using the `tipa` library
@@ -57,7 +57,7 @@ Each element of the rule can be composed of the following:
 
 - `\features{\f{+}{stop} \f{+}{alv.}}`, a feature matrix, where each `\f{+/-}{name}` is a feature
 
-  - ![](http://quicklatex.com/cache3/ql_99daf3ac81513b700e089296a4bcbe14_l3.png)
+	- ![](http://quicklatex.com/cache3/ql_99daf3ac81513b700e089296a4bcbe14_l3.png)
 
 - `\cvfeatures{C}{\f{\alpha}{place}}`: as above, but with a CV-tier element above the feature matrix
 
@@ -70,12 +70,12 @@ Each element of the rule can be composed of the following:
 
 - `\#`: a word-boundary marker
 
-  - ![{\Large \textrm{\#}}](http://quicklatex.com/cache3/ql_116e63d849b0cb126a9a65cd051ed4d9_l3.png)
+	- ![{\Large \textrm{\#}}](http://quicklatex.com/cache3/ql_116e63d849b0cb126a9a65cd051ed4d9_l3.png)
 
 
 - `\null`: a null symbol
 
-  - ![{\Large \emptyset}](http://quicklatex.com/cache3/ql_d1f8e8fee9c57339e81b7add9c81380f_l3.png)
+	- ![{\Large \emptyset}](http://quicklatex.com/cache3/ql_d1f8e8fee9c57339e81b7add9c81380f_l3.png)
 
 
 <a name="examples"></a>
