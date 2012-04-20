@@ -13,7 +13,9 @@
 
 The basic format of a phonological rule is:
 
+	\begin{phon_rule}
 	A \> B \/ C \_ D
+	\end{phon_rule}
 
 which produces
 
@@ -39,11 +41,11 @@ Each element of the rule can be composed of the following:
 
 - `\features{\f{+}{stop} \f{+}{alv.}}`, a feature matrix, where each `\f{+/-}{name}` is a feature
 
-  - ![]{http://quicklatex.com/cache3/ql_99daf3ac81513b700e089296a4bcbe14_l3.png}
+  - ![](http://quicklatex.com/cache3/ql_99daf3ac81513b700e089296a4bcbe14_l3.png)
 
 - `\cvfeatures{C}{\f{\alpha}{place}}`: as above, but with a CV-tier element above the feature matrix
 
-	- ![]{http://quicklatex.com/cache3/ql_a92d92e8bad5303ca0d5719ae9896a91_l3.png}
+	- ![](http://quicklatex.com/cache3/ql_a92d92e8bad5303ca0d5719ae9896a91_l3.png)
 
 - `\oneof{\# \\ \cv{C}}`
 
@@ -64,3 +66,4 @@ Each element of the rule can be composed of the following:
 
 ### 3\. Examples
 
+Examples of phonological rules are found in the body of `phon_rule.tex`, and their output can be seen in `phon_rule.pdf`.
