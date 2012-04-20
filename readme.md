@@ -19,8 +19,8 @@ To use this environment, simple copy the preamble of `phon_rule.tex` into your o
 file. If this proves to be popular enough, I'll try to make it into a package, but I have 
 no experience with LaTeX's packaging system.
 
-Most of the LaTeX in this readme was automatically rendered using [markdown-pp](http://www.holoborodko.com/pavel/quicklatex/)
-by way of [QuickLaTeX](). Because QuickLaTeX does not yet support the `tipa` package, 
+Most of the LaTeX in this readme was automatically rendered using [markdown-pp](https://github.com/AlexNisnevich/markdown-pp)
+by way of [QuickLaTeX](http://www.holoborodko.com/pavel/quicklatex/). Because QuickLaTeX does not yet support the `tipa` package, 
 any IPA symbols in this readme are approximations using the closest available LaTeX symbol.
 
 <a name="usingthe`phon_rule`environment"></a>
