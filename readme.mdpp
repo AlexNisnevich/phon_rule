@@ -1,14 +1,30 @@
 
+**phon_rule** is a user-friendly LaTeX environment for typsetting phonological rules.
+
+### Table of Contents
+
 !TOC
 
 ### Introduction
+
+I couldn't find a good LaTeX environment for phonological rules, so I wrote my own. The
+phon_rule environment aims to be as simple to use as possible, while still being flexible
+in the types of rules it can draw.
+
+To use this environment, simple copy the preamble of `phon_rule.tex` into your own LaTeX 
+file. If this proves to be popular enough, I'll try to make it into a package, but I have 
+no experience with LaTeX's packaging system.
+
+Most of the LaTeX in this readme was automatically rendered using [markdown-pp](http://www.holoborodko.com/pavel/quicklatex/)
+by way of [QuickLaTeX](). Because QuickLaTeX does not yet support the `tipa` package, 
+any IPA symbols in this readme are approximations using the closest available LaTeX symbol.
 
 ### Using the `phon_rule` Environment
 
 The basic format of a phonological rule is:
 
 	\begin{phon_rule}
-	A \> B \/ C \_ D
+		A \> B \/ C \_ D
 	\end{phon_rule}
 
 which produces
