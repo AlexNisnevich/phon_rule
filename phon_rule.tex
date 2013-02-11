@@ -6,13 +6,13 @@
 \newenvironment{phon_rule}{%
   \begin{center}
   \renewcommand\>{\ {\Large $\to$}\ }
-  \renewcommand{\/}{{\Huge \ /\ }}
+  \renewcommand{\/}{{\Large \ /\ }}
   \newcommand{\when}{\/}
   \renewcommand\_{\ $\rule{2em}{0.5pt}$\ }
-  \renewcommand\null{{\Large $\emptyset$}\ \ }
+  \renewcommand\null{{\ \Huge \ipa{\o}}\ \ }
 
-  \newcommand{\phone}[1]{\ [\ \ipa{##1}\ ]\ }
-  \newcommand{\phoneme}[1]{\ /\ \ipa{##1} /\ }
+  \newcommand{\phone}[1]{\ [\ipa{##1}]\ }
+  \newcommand{\phoneme}[1]{\ /\ipa{##1}/\ }
 
   \newcommand{\cv}[1]{{\Large \textrm{##1}}}
   \let\hash\# \renewcommand\#{ \cv{\hash} }
@@ -40,6 +40,11 @@
 }{%
   \end{center}
 }
+
+% potentially useful helper functions
+\newcommand{\xipa}[1]{$^\text{x}$\ipa{#1}} % prepends subscript 'x' for incorrect forms
+\newcommand{\word}[1]{\textit{\ipa{#1}}} % italicized ipa
+\newcommand{\into}{$\rightarrow\ $} % =>
 
 \begin{document}
 
