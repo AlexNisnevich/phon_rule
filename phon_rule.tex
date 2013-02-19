@@ -5,16 +5,16 @@
 
 \newenvironment{phon_rule}{%
   \begin{center}
-  \renewcommand\>{\ {\Large $\to$}\ }
-  \renewcommand{\/}{{\Large \ /\ }}
+  \renewcommand\>{\ {\textrm{\Large $\to$}}\ }
+  \renewcommand{\/}{{\textrm{\Large \ /\ }}}
   \newcommand{\when}{\/}
   \renewcommand\_{\ $\rule{2em}{0.5pt}$\ }
-  \renewcommand\null{{\ \Huge \ipa{\o}}\ \ }
+  \renewcommand\null{{\textrm{\ \Huge \ipa{\o}}\ \ }}
 
   \newcommand{\phone}[1]{\ [\ipa{##1}]\ }
   \newcommand{\phoneme}[1]{\ /\ipa{##1}/\ }
 
-  \newcommand{\cv}[1]{{\Large \textrm{##1}}}
+  \newcommand{\cv}[1]{{\textrm{\Large ##1}}}
   \let\hash\# \renewcommand\#{ \cv{\hash} }
 
   \newcommand{\features}[1]{
