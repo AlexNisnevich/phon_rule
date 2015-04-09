@@ -47,12 +47,12 @@ Each element of the rule can be composed of the following:
 
 - `\phoneme{S}`: an IPA phoneme, using the `tipa` library
 
-	- ![/\int/](readme-images/phoneme-s.png)
+	- ![/\int/](readme-images/sh-phoneme.png)
 
 
 - `\phone{S}`: as above, but displayed with phonetic brackets
 
-	- ![[\int]](readme-images/phone-s.png)
+	- ![[\int]](readme-images/sh-phone.png)
 
 
 - `\features{\f{+}{stop} \f{+}{alv.}}`, a feature matrix, where each `\f{+/-}{name}` is a feature
