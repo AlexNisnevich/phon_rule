@@ -4,8 +4,8 @@
 ### Table of Contents
 
 1\.  [Introduction](#introduction)  
-2\.  [Using the `phon_rule` Environment](#usingthe`phon_rule`environment)
-3\.  [The `center` Option](#the`center`option)
+2\.  [Using the `phon_rule` Environment](#usingthe`phon_rule`environment)  
+3\.  [The `center` Option](#the`center`option)  
 4\.  [Examples](#examples)  
 
 <a name="introduction"></a>
