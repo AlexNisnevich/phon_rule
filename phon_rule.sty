@@ -1,0 +1,65 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{phon_rule}
+\RequirePackage{tipa,delarray,amsmath}
+
+% establishes the `center' option
+% toggles whether or not the rules are centered
+\newif\if@center\@centerfalse
+\DeclareOption{center}{
+  \@centertrue
+}
+
+\ProcessOptions\relax
+
+\newcommand{\ipa}[1]{\textipa{#1}}
+
+% establishes the phon_rule environment
+\newenvironment{phon_rule}{%
+  \if@center
+  \begin{center}
+  \fi
+
+  \renewcommand\>{\ {\textrm{\Large $\to$}}\ }
+  \renewcommand{\/}{{\textrm{\Large \ /\ }}}
+  \newcommand{\when}{\/}
+  \renewcommand\_{\ $\rule{2em}{0.5pt}$\ }
+  \renewcommand\null{{\textrm{\ \Huge \ipa{\o}}\ \ }}
+
+
+  \newcommand{\cv}[1]{{\textrm{\Large ##1}}}
+  \let\hash\# \renewcommand\#{ \cv{\hash} }
+
+  \newcommand{\features}[1]{
+    $\begin{array}[c][ {l} ]
+      \vspace{-1bp}
+      ##1
+    \end{array}$
+  }
+  \newcommand{\cvfeatures}[2]{
+    $\begin{array}{c}
+       \cv{##1} \\
+       \begin{array}[c][ {l} ]
+         \vspace{-1bp}
+         ##2
+       \end{array}
+    \end{array}$
+  }
+  \newcommand{\f}[2]{
+    ##1\,\,\rm{##2} \\
+  }
+
+  \newcommand{\oneof}[1]{$\begin{cases} ##1 \end{cases}$}
+}{%
+  \if@center
+  \end{center}
+  \fi
+}
+
+% additional useful commands
+\newcommand{\phone}[1]{\ [\ipa{#1}]\ }
+\newcommand{\phoneme}[1]{\ /\ipa{#1}/\ }
+\newcommand{\xipa}[1]{$^\text{x}$\ipa{#1}} % prepends subscript 'x' for incorrect forms
+\newcommand{\word}[1]{\textit{\ipa{#1}}} % italicized ipa
+\newcommand{\into}{$\rightarrow\ $} % =>
+
+\endinput
